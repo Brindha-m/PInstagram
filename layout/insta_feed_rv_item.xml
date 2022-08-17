@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/idLLTopBar_feed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <!--circle image for displaying the user image-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileimg"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/logo" />
+
+        <!--text view for displaying user name-->
+        <TextView
+            android:id="@+id/idTVAuthorName_feed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:padding="3dp"
+            android:text="Pinstagram"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--image view to display the post image-->
+
+    <!--text view to display likes count-->
+
+    <ImageView
+        android:id="@+id/idIVPost_feed"
+        android:layout_width="match_parent"
+        android:layout_height="301dp"
+        android:layout_below="@id/idLLTopBar_feed"
+        android:layout_marginTop="2dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/frozen" />
+
+    <TextView
+        android:id="@+id/idTVLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idIVPost_feed"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:padding="5dp"
+        android:textColor="#787373"
+        android:textStyle="bold" />
+
+    <!--text view to display the caption
+        in instagram post-->
+
+
+    <TextView
+        android:id="@+id/tvlikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idIVPost_feed"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:padding="5dp"
+        android:text="️likes"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+<!--    <Button-->
+<!--        android:id="@+id/view_post"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/idIVPost"-->
+<!--        android:layout_marginStart="300dp"-->
+<!--        android:layout_marginEnd="6dp"-->
+<!--        android:layout_marginBottom="6dp"-->
+<!--        android:padding="6dp"-->
+<!--        android:text="View Post" />-->
+    <Button
+        android:id="@+id/thumbsUp_feed"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idIVPost_feed"
+        android:text="👍🏻" />
+
+    <Button
+        android:id="@+id/heart"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idIVPost_feed"
+        android:layout_marginStart="64dp"
+        android:text="❤" />
+
+    <Button
+        android:id="@+id/smile"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idIVPost_feed"
+        android:layout_marginStart="128dp"
+        android:layout_marginBottom="54dp"
+        android:text="😂" />
+
+
+    <Button
+        android:id="@+id/thumbsDown_feed"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idIVPost_feed"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="54dp"
+        android:text="👎" />
+
+    <Button
+        android:id="@+id/notnice"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idIVPost_feed"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="54dp"
+        android:text="🤮" />
+
+    <Button
+        android:id="@+id/angry"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="60dp"
+        android:layout_height="54dp"
+        android:layout_above="@+id/tv_desc"
+        android:layout_below="@+id/idIVPost_feed"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="37dp"
+        android:text="😡" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVLikes"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:padding="5dp"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer "
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="470dp"
+        android:layout_marginBottom="10dp"
+        android:text="Comments"
+        android:textColor="@color/colorAccent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/commentedby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="490dp"
+        android:text="Happyy :("
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="520dp"
+        android:text="date"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+
+
+    <ImageButton
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="21dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="375dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="4dp"
+        android:padding="3dp"
+        android:src="@drawable/ic_more" />
+
+</RelativeLayout>

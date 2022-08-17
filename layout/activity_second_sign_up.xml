@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Register.SecondSignUp">
+
+
+        <LinearLayout
+            android:id="@+id/progressbar_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_background"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            android:padding="13dp"
+            android:visibility="gone"
+
+            >
+
+            <ProgressBar
+                android:id="@+id/loader"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="5dp" />
+
+            <TextView
+                android:id="@+id/loading_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/avenirlight"
+                android:text="Signing You Up.."
+                android:textSize="15.311sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:elevation="5dp"
+                android:onClick="uploadImage"
+                app:cardCornerRadius="5dp">
+
+                <ImageView
+                    android:id="@+id/image_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_camera" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22.5dp"
+                android:layout_marginRight="22.5dp"
+                android:fontFamily="@font/avenirheavy"
+                android:gravity="center_horizontal"
+                android:text="Complete Your Profile!"
+                android:textColor="#0d0101"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5.117dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/avenirheavy"
+                android:text="Gender:"
+                android:textColor="#525050"
+                android:textSize="16sp"
+
+
+                />
+
+
+            <RadioGroup
+                android:id="@+id/radio_group_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="1"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:checked="false"
+                    android:text="Male"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:checked="false"
+                    android:text="Female"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5.117dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/avenirheavy"
+                android:text="Profile Type:"
+                android:textColor="#525050"
+
+                android:textSize="16sp"
+
+
+                />
+
+            <RadioGroup
+                android:id="@+id/radio_group_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="1">
+
+                <RadioButton
+                    android:id="@+id/radio_personal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:checked="false"
+                    android:text="Personal"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_business"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:checked="false"
+                    android:text="Business"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+
+                >
+
+                <TextView
+                    android:id="@+id/dob_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="Date Of Birth:"
+                    android:textColor="#525050"
+                    android:textSize="16sp"
+
+                    />
+
+
+                <ImageView
+                    android:id="@+id/dob_image"
+                    android:layout_width="0dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_date" />
+
+
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/avenirheavy"
+                    android:gravity="center"
+                    android:text="Choose your favourite Category"
+                    android:textColor="#0091EA"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="Gaming"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBox2"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="Technology"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="Food"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBox2"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox2"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="Music"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBox2"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox2"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="Sports"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBox2"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox2"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btsave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/avenirheavy"
+                android:onClick="SecondRegistration"
+                android:text="Save Details"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
